@@ -87,14 +87,6 @@ class Job{
 
 	//Delete a job listing
 	public function update($job_id,$data){
-		echo "<br>job_id $job_id";
-		var_dump($data);
-		
-		echo "<br>";
-		echo "<br>";
-		echo "<br>";
-		exit();
-		
 		$this->db->query("UPDATE `jobs`
 		SET `category_id`=:category_id,
 		`job_title`=:job_title,
