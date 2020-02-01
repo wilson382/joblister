@@ -3,13 +3,13 @@
 session_start();
 
 //Config file
-require_once("config.php");
+require_once(__DIR__ ."/config.php");
 
 //Config file
-require_once("helpers/system_helper.php");
+require_once(__DIR__ . "/../helpers/system_helper.php");
 
 #Class Auto Loader
 function __autoload($class_name){
-	require_once("libs/$class_name.php");
+	require_once(__DIR__ . "/../libs/$class_name.php");
 }
 ?>
