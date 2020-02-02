@@ -19,7 +19,7 @@ class Job{
 
 	//Get only 1 Job
 	public function getJob(int $job_id){
-		$this->validation->isInteger($job_id);
+		// $this->validation->isInteger($job_id);
 		$this->db->query("SELECT * FROM `jobs`WHERE `id`=:job_id;");
 		$this->db->bind(":job_id",$job_id);
 		$row=$this->db->single();
@@ -35,7 +35,7 @@ class Job{
 
 	//Get only 1 category
 	public function getCategory(int $category){
-		$this->validation->isInteger($category);
+		// $this->validation->isInteger($category);
 		$this->db->query("SELECT * FROM `categories` WHERE `id`=:category_id;");
 		$this->db->bind(":category_id",$category);
 		$row=$this->db->single();
@@ -44,7 +44,7 @@ class Job{
 
 	//Get Categories by Filter
 	public function getByCategory(int $category){
-		$this->validation->isInteger($category);
+		// $this->validation->isInteger($category);
 		$this->db->query("SELECT `jobs`.*,`categories`.`name` AS cname FROM `jobs` INNER JOIN `categories`
 		ON `jobs`.`category_id`=`categories`.`id` WHERE `jobs`.`category_id`=:category_id
 		ORDER BY `jobs`.`post_date` DESC;");
@@ -54,7 +54,7 @@ class Job{
 	}
 
 	//Create new job
-	public function create($data){
+	public function create(array $data){
 		//Insert query
 		$this->db->query("INSERT INTO `jobs` (`category_id`,`job_title`,`company`,`description`,`location`,`salary`,`contact_user`,`contact_email`)
 		VALUES (:category_id,:job_title,:company,:description,:location,:salary,:contact_user,:contact_email);");
@@ -79,7 +79,7 @@ class Job{
 
 	//Delete a job listing
 	public function delete(int $id){
-		$this->validation->isInteger($id);
+		// $this->validation->isInteger($id);
 		$this->db->query("DELETE FROM `jobs` WHERE `id`=:id;");
 		$this->db->bind(":id",$id);
 
@@ -92,8 +92,8 @@ class Job{
 	}
 
 	//Delete a job listing
-	public function update(int $job_id,$data){
-		$this->validation->isInteger($job_id);
+	public function update(int $job_id,array $data){
+		// $this->validation->isInteger($job_id);
 		$this->db->query("UPDATE `jobs`
 		SET `category_id`=:category_id,
 		`job_title`=:job_title,
