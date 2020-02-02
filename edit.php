@@ -1,7 +1,7 @@
 <?php
 require_once("config/init.php");
 
-$job = new Job;
+$job = new Job();
 
 $job_id = isset($_GET['id']) ? $_GET['id']: null;
 

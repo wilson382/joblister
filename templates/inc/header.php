@@ -2,8 +2,8 @@
 <html>
 <head>
 	<title>JobLister</title>
-	<link rel='stylesheet' href='css/bootswatch.min.css'>
-	<link rel='stylesheet' href='css/style.css'>
+	<link rel='stylesheet' href='assets/css/bootswatch.min.css'>
+	<link rel='stylesheet' href='assets/css/style.css'>
 </head>
 <body>
    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">

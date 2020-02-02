@@ -1,7 +1,7 @@
 <?php
 require_once("config/init.php");
 
-$job = new Job;
+$job = new Job();
 
 if (isset($_POST['submit'])){
 	//Create Data Array

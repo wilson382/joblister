@@ -4,7 +4,7 @@ class Api{
 	private $job;
 
 	public function __construct(){
-		$this->job= new Job;
+		$this->job= new Job();
 	}
 
 	public function validateToken($token_name,$token_id,$token_password){

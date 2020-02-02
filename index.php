@@ -1,7 +1,7 @@
 <?php
 require_once("config/init.php");
 
-$job = new Job;
+$job = new Job();
 $template = new Template("templates/frontpage.php");
 
 $category = isset($_GET['category']) ? $_GET['category']: null;
